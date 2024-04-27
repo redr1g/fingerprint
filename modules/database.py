@@ -13,7 +13,7 @@ class Database:
         self.average_matrix = np.array([])
         self.pca = PCA()
 
-    def load_fingers(self, subfolder_name, data_folder="data"):
+    def load_fingers(self, data_folder, subfolder_name):
         """
         Loads fingers from 1 specified subfolder into the database into data_fingers attribute
         """

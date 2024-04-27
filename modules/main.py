@@ -5,8 +5,9 @@ import numpy as np
 
 if __name__ == "__main__":
     db = Database()
+    data_path = 'data' #will take 150x150 images, change to data100 or initial_data for 100x100 and 200x200 sizes respectively
     subfold_name = 'sub1' #loads images from sub1 folder, enter the one u want or load_all_fingers
-    db.load_fingers(subfold_name)
+    db.load_fingers(data_path, subfold_name)
 
     #uncomment to load all images from all subfolders, in this case dont forget to comment 2 lines above
     # db.load_all_fingers()
@@ -37,7 +38,7 @@ if __name__ == "__main__":
 
     min_distance = min(distances)
     print(min_distance, distances.index(min_distance))
-    threshold = 1700
+    threshold = 2000
     is_in_dataset = min_distance < threshold
 
     print("Is the projected image from the dataset?", is_in_dataset)
