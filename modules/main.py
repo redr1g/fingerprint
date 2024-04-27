@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     min_distance = min(distances)
     print(min_distance, distances.index(min_distance))
-    threshold = 1700
+    threshold = 2000
     is_in_dataset = min_distance < threshold
 
     print("Is the projected image from the dataset?", is_in_dataset)
